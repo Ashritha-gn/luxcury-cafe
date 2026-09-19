@@ -84,3 +84,62 @@
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
+/* =========================================
+   PREMIUM CATEGORY BUTTONS
+========================================= */
+
+.category-grid button {
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid rgba(120, 80, 50, 0.14);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.95),
+      rgba(247,236,222,0.95)
+    );
+
+  color: #4b2d1d;
+
+  box-shadow:
+    0 8px 20px rgba(70, 40, 20, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.category-grid button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+
+  transform: translateX(-120%);
+  transition: transform 0.5s ease;
+}
+
+.category-grid button:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 14px 30px rgba(70, 40, 20, 0.14);
+}
+
+.category-grid button:hover::after {
+  transform: translateX(120%);
+}
+
+.category-grid button:active {
+  transform: translateY(-1px) scale(0.98);
+}
