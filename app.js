@@ -287,4 +287,98 @@ function updateLoyalty() {
   if (bobaStamps >= 8) {
 
     stampStatus.textContent =
-      "🎉
+      "🎉 Reward unlocked! Enjoy 1 FREE Classic Boba.";
+
+    stampStatus.classList.add(
+      "reward-ready"
+    );
+
+  } else {
+
+    stampStatus.textContent =
+      bobaStamps +
+      " / 8 stamps collected";
+
+    stampStatus.classList.remove(
+      "reward-ready"
+    );
+
+  }
+
+}
+
+
+// =========================================
+// CHECK BOBA ORDER
+// =========================================
+
+function orderContainsBoba() {
+
+  return cart.some(item =>
+    item.name
+      .toLowerCase()
+      .includes("boba")
+  );
+
+}
+
+
+// =========================================
+// DEMO CHECKOUT
+// =========================================
+
+function completeDemoOrder() {
+
+  if (cart.length === 0) {
+
+    alert(
+      "Your café bag is empty."
+    );
+
+    return;
+
+  }
+
+
+  const hasBoba =
+    orderContainsBoba();
+
+
+  if (hasBoba && bobaStamps < 8) {
+
+    bobaStamps++;
+
+    localStorage.setItem(
+      "bobaStamps",
+      bobaStamps
+    );
+
+  }
+
+
+  if (hasBoba) {
+
+    if (bobaStamps >= 8) {
+
+      alert(
+        "🎉 Order complete!\n\n" +
+        "You earned your 8th boba stamp!\n\n" +
+        "🧋 FREE Classic Boba unlocked!"
+      );
+
+    } else {
+
+      alert(
+        "☕ Order complete!\n\n" +
+        "🧋 You earned 1 Boba Stamp!\n\n" +
+        bobaStamps +
+        " / 8 stamps collected."
+      );
+
+    }
+
+  } else {
+
+    alert(
+      "☕ Order complete!\n\n" +
+      "Your order
