@@ -41,7 +41,7 @@
     </div>
 
 
-    <!-- BIG CAFÉ BAG -->
+    <!-- CAFÉ BAG -->
 
     <button
       class="cart-button"
@@ -68,13 +68,11 @@
 
     <section class="hero">
 
-
       <div class="hero-text">
 
         <p class="eyebrow">
           FRESHLY MADE • PREMIUM CAFÉ
         </p>
-
 
         <h1>
 
@@ -84,14 +82,12 @@
 
         </h1>
 
-
         <p>
 
           Explore our café, discover signature dishes,
           and enjoy a completely interactive food experience.
 
         </p>
-
 
         <button
           class="primary-button"
@@ -103,7 +99,6 @@
         </button>
 
       </div>
-
 
 
       <div class="hero-food">
@@ -256,6 +251,9 @@
       <div class="menu-grid">
 
 
+        <!-- BOBA -->
+
+
         <article class="menu-item">
 
           <div class="menu-image">
@@ -263,11 +261,11 @@
           </div>
 
           <h3>
-            Brown Sugar Boba
+            Brown Sugar Boba Milk Tea
           </h3>
 
           <p>
-            Classic creamy milk tea with brown sugar pearls.
+            Creamy milk tea with rich brown sugar pearls.
           </p>
 
           <strong>
@@ -275,7 +273,7 @@
           </strong>
 
           <button
-            onclick="addToCart('Brown Sugar Boba', 189)"
+            onclick="addToCart('Brown Sugar Boba Milk Tea', 189)"
           >
             Add to Bag
           </button>
@@ -295,7 +293,7 @@
           </h3>
 
           <p>
-            Fresh strawberry flavour with creamy boba.
+            Sweet strawberry cream with chewy boba pearls.
           </p>
 
           <strong>
@@ -315,15 +313,74 @@
         <article class="menu-item">
 
           <div class="menu-image">
-            🍦
+            🥭
           </div>
 
           <h3>
-            Signature Sundae
+            Mango Passion Boba
           </h3>
 
           <p>
-            Three premium scoops with delicious toppings.
+            Tropical mango and passion fruit with fresh pearls.
+          </p>
+
+          <strong>
+            ₹179
+          </strong>
+
+          <button
+            onclick="addToCart('Mango Passion Boba', 179)"
+          >
+            Add to Bag
+          </button>
+
+        </article>
+
+
+
+        <article class="menu-item">
+
+          <div class="menu-image">
+            🧋
+          </div>
+
+          <h3>
+            Classic Milk Tea
+          </h3>
+
+          <p>
+            Smooth traditional milk tea with classic tapioca pearls.
+          </p>
+
+          <strong>
+            ₹159
+          </strong>
+
+          <button
+            onclick="addToCart('Classic Milk Tea', 159)"
+          >
+            Add to Bag
+          </button>
+
+        </article>
+
+
+
+        <!-- ICE CREAM -->
+
+
+        <article class="menu-item">
+
+          <div class="menu-image">
+            🍨
+          </div>
+
+          <h3>
+            Signature 3-Scoop Sundae
+          </h3>
+
+          <p>
+            Three premium scoops finished with indulgent toppings.
           </p>
 
           <strong>
@@ -331,7 +388,7 @@
           </strong>
 
           <button
-            onclick="addToCart('Signature Sundae', 229)"
+            onclick="addToCart('Signature 3-Scoop Sundae', 229)"
           >
             Add to Bag
           </button>
@@ -343,23 +400,23 @@
         <article class="menu-item">
 
           <div class="menu-image">
-            🥟
+            🍨
           </div>
 
           <h3>
-            Steamed Momos
+            Pistachio Dream
           </h3>
 
           <p>
-            Soft, juicy momos served with our signature sauce.
+            Creamy pistachio ice cream with a delicate nutty finish.
           </p>
 
           <strong>
-            ₹169
+            ₹199
           </strong>
 
           <button
-            onclick="addToCart('Steamed Momos', 169)"
+            onclick="addToCart('Pistachio Dream', 199)"
           >
             Add to Bag
           </button>
@@ -371,23 +428,23 @@
         <article class="menu-item">
 
           <div class="menu-image">
-            🥤
+            🍫
           </div>
 
           <h3>
-            Mango Cooler
+            Belgian Chocolate
           </h3>
 
           <p>
-            Refreshing tropical mango cooler.
+            Rich Belgian chocolate ice cream for serious chocolate lovers.
           </p>
 
           <strong>
-            ₹169
+            ₹189
           </strong>
 
           <button
-            onclick="addToCart('Mango Cooler', 169)"
+            onclick="addToCart('Belgian Chocolate', 189)"
           >
             Add to Bag
           </button>
@@ -399,163 +456,22 @@
         <article class="menu-item">
 
           <div class="menu-image">
-            🦀
+            🍓
           </div>
 
           <h3>
-            Royal Seafood Platter
+            Strawberry Cheesecake
           </h3>
 
           <p>
-            Crab, grilled fish and prawns with fresh garnish.
+            Strawberry cheesecake ice cream with a creamy finish.
           </p>
 
           <strong>
-            ₹599
+            ₹199
           </strong>
 
           <button
-            onclick="addToCart('Royal Seafood Platter', 599)"
+            onclick="addToCart('Strawberry Cheesecake', 199)"
           >
-            Add to Bag
-          </button>
-
-        </article>
-
-
-      </div>
-
-    </section>
-<!-- LOYALTY PROGRAM -->
-
-<section class="loyalty">
-
-  <div class="loyalty-card">
-
-    <div class="loyalty-icon">
-      🧋
-    </div>
-
-    <div class="loyalty-content">
-
-      <p class="eyebrow">
-        YOUR CAFÉ REWARDS
-      </p>
-
-      <h2>
-        Boba Stamp Card
-      </h2>
-
-      <p>
-        Collect 8 boba stamps and enjoy
-        <strong>1 FREE Classic Boba.</strong>
-      </p>
-
-      <div
-        class="stamp-grid"
-        id="stampGrid"
-      >
-
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>5</span>
-        <span>6</span>
-        <span>7</span>
-        <span>8</span>
-
-      </div>
-
-      <p class="stamp-status" id="stampStatus">
-        0 / 8 stamps collected
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-  </main>
-
-
-
-  <!-- SHOPPING BAG PANEL -->
-
-  <div
-    class="cart-panel"
-    id="cartPanel"
-  >
-
-    <div class="cart-header">
-
-      <h2>
-        Your Café Bag
-      </h2>
-
-      <button
-        id="closeCart"
-      >
-        ×
-      </button>
-
-    </div>
-
-
-    <div
-      class="cart-items"
-      id="cartItems"
-    >
-
-      <p class="empty-cart">
-        Your bag is empty.
-      </p>
-
-    </div>
-
-
-    <div class="cart-footer">
-
-      <div>
-
-        <span>
-          Total
-        </span>
-
-        <strong id="cartTotal">
-          ₹0
-        </strong>
-
-      </div>
-
-
-      <button
-        class="checkout-button"
-        id="checkoutButton"
-      >
-
-        Continue to Checkout →
-
-      </button>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- DARK OVERLAY -->
-
-  <div
-    class="cart-overlay"
-    id="cartOverlay"
-  ></div>
-
-
-
-  <script src="app.js"></script>
-
-</body>
-
-</html>
+           
