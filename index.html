@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -13,14 +12,56 @@
   <title>Your Café</title>
 
   <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
+  <!-- =========================================
+       WELCOME EXPERIENCE
+  ========================================== -->
 
-  <!-- NAVBAR -->
+  <section class="welcome-screen" id="welcomeScreen">
+
+    <div class="welcome-glow"></div>
+
+    <div class="welcome-chef">
+      👩‍🍳
+    </div>
+
+    <p class="welcome-eyebrow">
+      WELCOME TO
+    </p>
+
+    <h1>
+      Your Café
+    </h1>
+
+    <p class="welcome-subtitle">
+      A little place for beautiful food,
+      happy moments and delicious discoveries.
+    </p>
+
+    <button
+      class="welcome-button"
+      id="welcomeButton"
+    >
+      ✨ Enter the Café
+    </button>
+
+    <button
+      class="voice-button"
+      id="voiceButton"
+      type="button"
+    >
+      🔊 Hear Welcome
+    </button>
+
+  </section>
+
+
+  <!-- =========================================
+       NAVBAR
+  ========================================== -->
 
   <header class="navbar">
 
@@ -58,11 +99,11 @@
   </header>
 
 
-
   <main>
 
-
-    <!-- HERO -->
+    <!-- =========================================
+         HERO
+    ========================================== -->
 
     <section class="hero">
 
@@ -73,27 +114,21 @@
         </p>
 
         <h1>
-
           Something delicious
           <br>
           is waiting.
-
         </h1>
 
         <p>
-
           Explore our café, discover signature dishes,
           and enjoy a completely interactive food experience.
-
         </p>
 
         <button
           class="primary-button"
           id="exploreButton"
         >
-
           Explore Menu →
-
         </button>
 
       </div>
@@ -138,8 +173,9 @@
     </section>
 
 
-
-    <!-- CATEGORIES -->
+    <!-- =========================================
+         CATEGORIES
+    ========================================== -->
 
     <section class="categories">
 
@@ -149,7 +185,6 @@
 
 
       <div class="category-grid">
-
 
         <button>
 
@@ -225,14 +260,14 @@
 
         </button>
 
-
       </div>
 
     </section>
 
 
-
-    <!-- MENU -->
+    <!-- =========================================
+         MENU
+    ========================================== -->
 
     <section
       class="menu"
@@ -243,8 +278,6 @@
         Signature Menu
       </h2>
 
-
-      <!-- SEARCH -->
 
       <div class="menu-search">
 
@@ -810,27 +843,23 @@
 
         </article>
 
-
       </div>
 
-
-      <!-- NO RESULTS -->
 
       <p
         id="noResults"
         class="no-results"
         style="display:none;"
       >
-
         No dishes found. Try another search.
-
       </p>
 
     </section>
 
 
-
-    <!-- LOYALTY -->
+    <!-- =========================================
+         LOYALTY
+    ========================================== -->
 
     <section class="loyalty">
 
@@ -847,11 +876,9 @@
             YOUR CAFÉ REWARDS
           </p>
 
-
           <h2>
             Boba Stamp Card
           </h2>
-
 
           <p>
             Collect 8 boba stamps and enjoy
@@ -889,12 +916,12 @@
 
     </section>
 
-
   </main>
 
 
-
-  <!-- SHOPPING BAG -->
+  <!-- =========================================
+       SHOPPING BAG
+  ========================================== -->
 
   <div
     class="cart-panel"
@@ -915,58 +942,4 @@
 
 
     <div
-      class="cart-items"
-      id="cartItems"
-    >
-
-      <p class="empty-cart">
-        Your bag is empty.
-      </p>
-
-    </div>
-
-
-    <div class="cart-footer">
-
-      <div>
-
-        <span>
-          Total
-        </span>
-
-        <strong id="cartTotal">
-          ₹0
-        </strong>
-
-      </div>
-
-
-      <button
-        class="checkout-button"
-        id="checkoutButton"
-      >
-
-        Continue to Checkout →
-
-      </button>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- OVERLAY -->
-
-  <div
-    class="cart-overlay"
-    id="cartOverlay"
-  ></div>
-
-
-
-  <script src="app.js"></script>
-
-</body>
-
-</html>
+      class="cart
