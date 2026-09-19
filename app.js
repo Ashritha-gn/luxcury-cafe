@@ -309,7 +309,7 @@ function updateLoyalty() {
 
 
 // =========================================
-// CHECK BOBA ORDER
+// BOBA CHECK
 // =========================================
 
 function orderContainsBoba() {
@@ -381,4 +381,4 @@ function completeDemoOrder() {
 
     alert(
       "☕ Order complete!\n\n" +
-      "Your order
+      "Your order has
