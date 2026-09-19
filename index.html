@@ -1,39 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Your Café</title>
 
   <link rel="stylesheet" href="style.css">
+
 </head>
 
+
 <body>
+
+
+  <!-- NAVBAR -->
 
   <header class="navbar">
 
     <div class="logo">
+
       ☕
+
       <div>
+
         <strong>Your Café</strong>
-        <span>GOOD FOOD • HAPPY MOOD</span>
+
+        <span>
+          GOOD FOOD • HAPPY MOOD
+        </span>
+
       </div>
+
     </div>
 
-    <button class="cart-button">
+
+    <!-- BIG CAFÉ BAG -->
+
+    <button
+      class="cart-button"
+      id="cartButton"
+      aria-label="Open shopping bag"
+    >
+
       🛍️
-      <span>0</span>
+
+      <span id="cartCount">
+        0
+      </span>
+
     </button>
 
   </header>
 
 
+
   <main>
+
 
     <!-- HERO -->
 
     <section class="hero">
+
 
       <div class="hero-text">
 
@@ -41,98 +75,438 @@
           FRESHLY MADE • PREMIUM CAFÉ
         </p>
 
+
         <h1>
+
           Something delicious
           <br>
           is waiting.
+
         </h1>
 
+
         <p>
+
           Explore our café, discover signature dishes,
           and enjoy a completely interactive food experience.
+
         </p>
 
-        <button class="primary-button">
+
+        <button
+          class="primary-button"
+          id="exploreButton"
+        >
+
           Explore Menu →
+
         </button>
 
       </div>
 
 
+
       <div class="hero-food">
 
+
         <div class="food-card boba">
+
           🧋
-          <strong>Boba</strong>
+
+          <strong>
+            Boba
+          </strong>
+
         </div>
+
 
         <div class="food-card icecream">
+
           🍦
-          <strong>Ice Cream</strong>
+
+          <strong>
+            Ice Cream
+          </strong>
+
         </div>
 
+
         <div class="food-card seafood">
+
           🦀
-          <strong>Seafood</strong>
+
+          <strong>
+            Seafood
+          </strong>
+
         </div>
+
 
       </div>
 
     </section>
+
 
 
     <!-- CATEGORIES -->
 
     <section class="categories">
 
-      <h2>Explore Our Café</h2>
+      <h2>
+        Explore Our Café
+      </h2>
+
 
       <div class="category-grid">
 
+
         <button>
+
           🧋
-          <strong>Boba Bar</strong>
-          <small>Classic & Tall</small>
+
+          <strong>
+            Boba Bar
+          </strong>
+
+          <small>
+            Classic & Tall
+          </small>
+
         </button>
 
+
         <button>
+
           🍦
-          <strong>Ice Cream</strong>
-          <small>Premium Scoops</small>
+
+          <strong>
+            Ice Cream
+          </strong>
+
+          <small>
+            Premium Scoops
+          </small>
+
         </button>
 
+
         <button>
+
           🌮
-          <strong>Snacks & Bites</strong>
-          <small>Momos, tacos & more</small>
+
+          <strong>
+            Snacks & Bites
+          </strong>
+
+          <small>
+            Momos, tacos & more
+          </small>
+
         </button>
 
+
         <button>
+
           🥤
-          <strong>Drinks</strong>
-          <small>Coolers & shakes</small>
+
+          <strong>
+            Drinks
+          </strong>
+
+          <small>
+            Coolers & shakes
+          </small>
+
         </button>
 
+
         <button>
+
           🦀
-          <strong>Seafood & Meals</strong>
-          <small>Fish, prawns & crab</small>
+
+          <strong>
+            Seafood & Meals
+          </strong>
+
+          <small>
+            Fish, prawns & crab
+          </small>
+
         </button>
+
 
       </div>
 
     </section>
 
 
+
     <!-- MENU -->
 
-    <section class="menu">
+    <section
+      class="menu"
+      id="menu"
+    >
 
-      <h2>Signature Menu</h2>
+      <h2>
+        Signature Menu
+      </h2>
+
 
       <div class="menu-grid">
 
+
         <article class="menu-item">
-          <div class="menu-image">🧋</div>
-          <h3>Brown Sugar Boba</h3>
-          <p>Classic creamy
+
+          <div class="menu-image">
+            🧋
+          </div>
+
+          <h3>
+            Brown Sugar Boba
+          </h3>
+
+          <p>
+            Classic creamy milk tea with brown sugar pearls.
+          </p>
+
+          <strong>
+            ₹189
+          </strong>
+
+          <button
+            onclick="addToCart('Brown Sugar Boba', 189)"
+          >
+            Add to Bag
+          </button>
+
+        </article>
+
+
+
+        <article class="menu-item">
+
+          <div class="menu-image">
+            🍓
+          </div>
+
+          <h3>
+            Strawberry Cream Boba
+          </h3>
+
+          <p>
+            Fresh strawberry flavour with creamy boba.
+          </p>
+
+          <strong>
+            ₹199
+          </strong>
+
+          <button
+            onclick="addToCart('Strawberry Cream Boba', 199)"
+          >
+            Add to Bag
+          </button>
+
+        </article>
+
+
+
+        <article class="menu-item">
+
+          <div class="menu-image">
+            🍦
+          </div>
+
+          <h3>
+            Signature Sundae
+          </h3>
+
+          <p>
+            Three premium scoops with delicious toppings.
+          </p>
+
+          <strong>
+            ₹229
+          </strong>
+
+          <button
+            onclick="addToCart('Signature Sundae', 229)"
+          >
+            Add to Bag
+          </button>
+
+        </article>
+
+
+
+        <article class="menu-item">
+
+          <div class="menu-image">
+            🥟
+          </div>
+
+          <h3>
+            Steamed Momos
+          </h3>
+
+          <p>
+            Soft, juicy momos served with our signature sauce.
+          </p>
+
+          <strong>
+            ₹169
+          </strong>
+
+          <button
+            onclick="addToCart('Steamed Momos', 169)"
+          >
+            Add to Bag
+          </button>
+
+        </article>
+
+
+
+        <article class="menu-item">
+
+          <div class="menu-image">
+            🥤
+          </div>
+
+          <h3>
+            Mango Cooler
+          </h3>
+
+          <p>
+            Refreshing tropical mango cooler.
+          </p>
+
+          <strong>
+            ₹169
+          </strong>
+
+          <button
+            onclick="addToCart('Mango Cooler', 169)"
+          >
+            Add to Bag
+          </button>
+
+        </article>
+
+
+
+        <article class="menu-item">
+
+          <div class="menu-image">
+            🦀
+          </div>
+
+          <h3>
+            Royal Seafood Platter
+          </h3>
+
+          <p>
+            Crab, grilled fish and prawns with fresh garnish.
+          </p>
+
+          <strong>
+            ₹599
+          </strong>
+
+          <button
+            onclick="addToCart('Royal Seafood Platter', 599)"
+          >
+            Add to Bag
+          </button>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- SHOPPING BAG PANEL -->
+
+  <div
+    class="cart-panel"
+    id="cartPanel"
+  >
+
+    <div class="cart-header">
+
+      <h2>
+        Your Café Bag
+      </h2>
+
+      <button
+        id="closeCart"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div
+      class="cart-items"
+      id="cartItems"
+    >
+
+      <p class="empty-cart">
+        Your bag is empty.
+      </p>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+      <div>
+
+        <span>
+          Total
+        </span>
+
+        <strong id="cartTotal">
+          ₹0
+        </strong>
+
+      </div>
+
+
+      <button
+        class="checkout-button"
+        id="checkoutButton"
+      >
+
+        Continue to Checkout →
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- DARK OVERLAY -->
+
+  <div
+    class="cart-overlay"
+    id="cartOverlay"
+  ></div>
+
+
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
