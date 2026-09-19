@@ -1,9 +1,17 @@
 let cart = [];
 
 
-// ================================
+// =========================================
+// LOYALTY
+// =========================================
+
+let bobaStamps =
+  Number(localStorage.getItem("bobaStamps")) || 0;
+
+
+// =========================================
 // ADD ITEM TO BAG
-// ================================
+// =========================================
 
 function addToCart(name, price) {
 
@@ -34,10 +42,9 @@ function addToCart(name, price) {
 }
 
 
-
-// ================================
+// =========================================
 // UPDATE CART
-// ================================
+// =========================================
 
 function updateCart() {
 
@@ -145,10 +152,9 @@ function updateCart() {
 }
 
 
-
-// ================================
+// =========================================
 // CHANGE QUANTITY
-// ================================
+// =========================================
 
 function changeQuantity(index, amount) {
 
@@ -167,10 +173,9 @@ function changeQuantity(index, amount) {
 }
 
 
-
-// ================================
+// =========================================
 // OPEN CART
-// ================================
+// =========================================
 
 function openCart() {
 
@@ -186,10 +191,9 @@ function openCart() {
 }
 
 
-
-// ================================
+// =========================================
 // CLOSE CART
-// ================================
+// =========================================
 
 function closeCart() {
 
@@ -205,10 +209,9 @@ function closeCart() {
 }
 
 
-
-// ================================
+// =========================================
 // BAG ANIMATION
-// ================================
+// =========================================
 
 function animateBag() {
 
@@ -249,59 +252,39 @@ function animateBag() {
 }
 
 
+// =========================================
+// LOYALTY DISPLAY
+// =========================================
 
-// ================================
-// BUTTON EVENTS
-// ================================
+function updateLoyalty() {
 
-document
-  .getElementById("cartButton")
-  .addEventListener(
-    "click",
-    openCart
-  );
+  const stampGrid =
+    document.getElementById("stampGrid");
 
-
-document
-  .getElementById("closeCart")
-  .addEventListener(
-    "click",
-    closeCart
-  );
+  const stampStatus =
+    document.getElementById("stampStatus");
 
 
-document
-  .getElementById("cartOverlay")
-  .addEventListener(
-    "click",
-    closeCart
-  );
+  if (!stampGrid || !stampStatus) {
+    return;
+  }
 
 
-
-// ================================
-// EXPLORE MENU
-// ================================
-
-document
-  .getElementById("exploreButton")
-  .addEventListener(
-    "click",
-    () => {
-
-      document
-        .getElementById("menu")
-        .scrollIntoView({
-          behavior: "smooth"
-        });
-
-    }
-  );
+  const stamps =
+    stampGrid.querySelectorAll("span");
 
 
+  stamps.forEach((stamp, index) => {
 
-// ================================
-// START
-// ================================
+    stamp.classList.toggle(
+      "filled",
+      index < bobaStamps
+    );
 
-updateCart();
+  });
+
+
+  if (bobaStamps >= 8) {
+
+    stampStatus.textContent =
+      "🎉
